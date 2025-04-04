@@ -2,7 +2,7 @@
 
 ## Links
 
-[Main Website: sm64js.com](https://sm64js.com)
+[Main Website](https://xkoop7321.github.io/Beta64JS/)
 
 ## Prerequisites
 
