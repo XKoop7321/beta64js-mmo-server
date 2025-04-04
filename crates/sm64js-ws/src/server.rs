@@ -620,6 +620,7 @@ impl Sm64JsServer {
                     chat_msg.is_admin = auth_info.is_in_game_admin();
                     chat_msg.socket_id = socket_id;
                     chat_msg.sender = username;
+                    println!("{} said: {}", chat_msg.sender, chat_msg.message);
                     Some(RootMsg {
                         message: Some(root_msg::Message::UncompressedSm64jsMsg(Sm64JsMsg {
                             message: Some(sm64_js_msg::Message::ChatMsg(chat_msg)),
