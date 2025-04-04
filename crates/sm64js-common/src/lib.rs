@@ -151,7 +151,7 @@ pub async fn send_discord_message(
     author: DiscordRichEmbedAuthor,
     footer: Option<DiscordRichEmbedFooter>,
 ) {
-    let client = awc::Client::builder()
+    /*let client = awc::Client::builder()
         .timeout(Duration::from_secs(15))
         .finish();
     let request = if let Some(message_id) = message_id {
@@ -189,7 +189,7 @@ pub async fn send_discord_message(
         Err(err) => {
             eprintln!("{:?}", err)
         }
-    };
+    };*/
 }
 
 pub fn get_ip_from_req(req: &HttpRequest) -> Option<String> {
