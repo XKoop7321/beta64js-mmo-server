@@ -1,10 +1,8 @@
-# sm64js-mmo-server
+# beta64js-mmo-server
 
 ## Links
 
 [Main Website: sm64js.com](https://sm64js.com)
-
-[Discord Server](https://discord.gg/7UaDnJt)
 
 ## Prerequisites
 
@@ -31,9 +29,6 @@ In your `.env` file, you don't have to insert all variables for local developmen
 It is only mandatory to have a running Postgres database, thus you need to set the `DATABASE_URL` variable.
 Currently only Google sign-in is mocked, so you will have to use this,
 if you cannot set up the Discord environment variables.
-
-If you also cannot manage to run your own Postres database, you can instead contact me
-(Tarnadas#0582 @ Discord) and I might give you access to the Postgres instance of the staging environment.
 
 You can then start the server via `cargo run`.
 Then navigate to `http://localhost:3060`.
