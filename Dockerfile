@@ -12,8 +12,8 @@ RUN set -eux; \
     \
     rm -rf /var/lib/apt/lists/*;
 
-COPY --from=sm64js/sm64js-build:latest /sm64js/target/release/sm64js ./sm64js
+COPY --from=beta64js-mmo-server:latest /sm64js/target/release/sm64js ./sm64js
 COPY ./openapi ./openapi
-COPY --from=sm64js/sm64js-assets:latest /usr/src/app/dist ./dist
+COPY --from=beta64js-client:latest /usr/src/app/dist ./dist
 
 CMD ["./sm64js"]
