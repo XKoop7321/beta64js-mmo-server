@@ -144,52 +144,14 @@ pub fn create_uncompressed_msg(msg: sm64_js_msg::Message) -> Vec<u8> {
 }
 
 pub async fn send_discord_message(
-    channel_id: &str,
-    message_id: Option<&str>,
-    description: String,
-    fields: Option<Vec<DiscordRichEmbedField>>,
-    author: DiscordRichEmbedAuthor,
-    footer: Option<DiscordRichEmbedFooter>,
+    _channel_id: &str,
+    _message_id: Option<&str>,
+    _description: String,
+    _fields: Option<Vec<DiscordRichEmbedField>>,
+    _author: DiscordRichEmbedAuthor,
+    _footer: Option<DiscordRichEmbedFooter>,
 ) {
-    /*let client = awc::Client::builder()
-        .timeout(Duration::from_secs(15))
-        .finish();
-    let request = if let Some(message_id) = message_id {
-        client.patch(format!(
-            "https://discord.com/api/channels/{}/messages/{}",
-            channel_id, message_id
-        ))
-    } else {
-        client.post(format!(
-            "https://discord.com/api/channels/{}/messages",
-            channel_id
-        ))
-    };
-    let request: SendClientRequest = request
-        .header(
-            awc::http::header::AUTHORIZATION,
-            format!("{} {}", "Bot", DISCORD_BOT_TOKEN.get().unwrap(),),
-        )
-        .send_json(&DiscordChatMessage {
-            embed: DiscordRichEmbed {
-                description,
-                fields,
-                timestamp: Utc::now().naive_utc(),
-                author,
-                footer,
-            },
-        });
-
-    match request.await {
-        Ok(res) => {
-            if !res.status().is_success() {
-                eprintln!("send_discord_message failed: {:?}", res);
-            };
-        }
-        Err(err) => {
-            eprintln!("{:?}", err)
-        }
-    };*/
+    // do nothing
 }
 
 pub fn get_ip_from_req(req: &HttpRequest) -> Option<String> {
